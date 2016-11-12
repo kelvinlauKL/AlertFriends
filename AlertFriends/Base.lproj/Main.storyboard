@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="nUw-BQ-o3O">
             <objects>
-                <viewController id="q42-Eg-Bkt" sceneMemberID="viewController">
+                <viewController id="q42-Eg-Bkt" customClass="LoginViewController" customModule="AlertFriends" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R5C-A8-hBR"/>
                         <viewControllerLayoutGuide type="bottom" id="aVQ-fs-8TB"/>
@@ -40,10 +40,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Sw-Sr-g3E">
                                         <rect key="frame" x="0.0" y="76" width="327" height="30"/>
                                         <state key="normal" title="Log In"/>
+                                        <connections>
+                                            <action selector="loginButtonTapped" destination="q42-Eg-Bkt" eventType="touchUpInside" id="gY9-tq-LTR"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRe-g6-4gB">
                                         <rect key="frame" x="0.0" y="114" width="327" height="30"/>
                                         <state key="normal" title="Sign Up"/>
+                                        <connections>
+                                            <action selector="signupButtonTapped" destination="q42-Eg-Bkt" eventType="touchUpInside" id="hdt-vQ-aFa"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -56,6 +62,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="X9q-rw-URV" id="Zj8-d4-peH"/>
+                        <outlet property="passwordTextField" destination="DBr-6O-I7D" id="IXP-uZ-Gb2"/>
                         <segue destination="UOo-nW-rAT" kind="presentation" identifier="mainScreen" id="e5S-Jo-oKD"/>
                     </connections>
                 </viewController>
@@ -69,6 +77,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="UOo-nW-rAT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="WrQ-My-HH9">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>

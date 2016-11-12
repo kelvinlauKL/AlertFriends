@@ -9,7 +9,8 @@
 import UIKit
 
 final class LoginViewController: UIViewController {
-  
+  @IBOutlet fileprivate var emailTextField: UITextField!
+  @IBOutlet fileprivate var passwordTextField: UITextField!
 }
 
 // MARK: - SegueHandlerType
@@ -22,6 +23,31 @@ extension LoginViewController: SegueHandlerType {
     switch segueIdentifierFor(segue: segue) {
     case .mainScreen:
       break
+    }
+  }
+}
+
+// MARK: - @IBActions
+private extension LoginViewController {
+  @IBAction func loginButtonTapped() {
+    Server.login(withEmail: emailTextField.text!, password: passwordTextField.text!) { response in
+      switch response {
+      case .success:
+        self.performSegue(withIdentifier: .mainScreen, sender: nil)
+      case .failure(let message):
+        self.displayAlert(withMessage: message)
+      }
+    }
+  }
+  
+  @IBAction func signupButtonTapped() {
+    Server.createAccount(withEmail: emailTextField.text!, password: passwordTextField.text!) { response in
+      switch response {
+      case .success:
+        break
+      case .failure(let message):
+        self.displayAlert(withMessage: message)
+      }
     }
   }
 }

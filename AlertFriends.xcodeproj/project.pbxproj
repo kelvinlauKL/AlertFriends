@@ -11,6 +11,9 @@
 		60340FDC1DD7BAE700C040F7 /* Network.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60340FDB1DD7BAE700C040F7 /* Network.storyboard */; };
 		60340FDF1DD7BB1A00C040F7 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60340FDE1DD7BB1A00C040F7 /* SegueHandlerType.swift */; };
 		60340FE31DD7BE0900C040F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60340FE21DD7BE0900C040F7 /* GoogleService-Info.plist */; };
+		60340FE61DD7BE8700C040F7 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60340FE51DD7BE8700C040F7 /* Server.swift */; };
+		60340FE81DD7BE9200C040F7 /* Server+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60340FE71DD7BE9200C040F7 /* Server+Auth.swift */; };
+		60340FEB1DD7C8B900C040F7 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60340FEA1DD7C8B900C040F7 /* UIViewController+Alert.swift */; };
 		608D0FB71DD7B8C1004860BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608D0FB61DD7B8C1004860BF /* AppDelegate.swift */; };
 		608D0FBC1DD7B8C1004860BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608D0FBA1DD7B8C1004860BF /* Main.storyboard */; };
 		608D0FBE1DD7B8C1004860BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 608D0FBD1DD7B8C1004860BF /* Assets.xcassets */; };
@@ -25,6 +28,10 @@
 		60340FDB1DD7BAE700C040F7 /* Network.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Network.storyboard; sourceTree = "<group>"; };
 		60340FDE1DD7BB1A00C040F7 /* SegueHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
 		60340FE21DD7BE0900C040F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		60340FE51DD7BE8700C040F7 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		60340FE71DD7BE9200C040F7 /* Server+Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Server+Auth.swift"; sourceTree = "<group>"; };
+		60340FE91DD7C18C00C040F7 /* AlertFriends.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlertFriends.entitlements; sourceTree = "<group>"; };
+		60340FEA1DD7C8B900C040F7 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		608D0FB31DD7B8C1004860BF /* AlertFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		608D0FB61DD7B8C1004860BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		608D0FBB1DD7B8C1004860BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,8 +76,18 @@
 			isa = PBXGroup;
 			children = (
 				60340FDE1DD7BB1A00C040F7 /* SegueHandlerType.swift */,
+				60340FEA1DD7C8B900C040F7 /* UIViewController+Alert.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		60340FE41DD7BE7E00C040F7 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				60340FE51DD7BE8700C040F7 /* Server.swift */,
+				60340FE71DD7BE9200C040F7 /* Server+Auth.swift */,
+			);
+			name = Server;
 			sourceTree = "<group>";
 		};
 		608D0FAA1DD7B8C1004860BF = {
@@ -94,7 +111,9 @@
 		608D0FB51DD7B8C1004860BF /* AlertFriends */ = {
 			isa = PBXGroup;
 			children = (
+				60340FE91DD7C18C00C040F7 /* AlertFriends.entitlements */,
 				608D0FB61DD7B8C1004860BF /* AppDelegate.swift */,
+				60340FE41DD7BE7E00C040F7 /* Server */,
 				60340FDD1DD7BB1200C040F7 /* Extensions */,
 				608D0FCB1DD7B97B004860BF /* Models */,
 				608D0FCA1DD7B977004860BF /* Views */,
@@ -177,6 +196,14 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 99A58D6B2S;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -267,8 +294,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60340FE81DD7BE9200C040F7 /* Server+Auth.swift in Sources */,
 				608D0FCD1DD7B99A004860BF /* LoginViewController.swift in Sources */,
 				60340FDF1DD7BB1A00C040F7 /* SegueHandlerType.swift in Sources */,
+				60340FEB1DD7C8B900C040F7 /* UIViewController+Alert.swift in Sources */,
+				60340FE61DD7BE8700C040F7 /* Server.swift in Sources */,
 				608D0FB71DD7B8C1004860BF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +431,7 @@
 			baseConfigurationReference = FE51125624AB3D3CC1E9F1C6 /* Pods-AlertFriends.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AlertFriends/AlertFriends.entitlements;
 				DEVELOPMENT_TEAM = 99A58D6B2S;
 				INFOPLIST_FILE = AlertFriends/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -415,6 +446,7 @@
 			baseConfigurationReference = A53C29A688B7760BD9C2B251 /* Pods-AlertFriends.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AlertFriends/AlertFriends.entitlements;
 				DEVELOPMENT_TEAM = 99A58D6B2S;
 				INFOPLIST_FILE = AlertFriends/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
