@@ -27,6 +27,8 @@ extension AppDelegate: UIApplicationDelegate {
     UNUserNotificationCenter.current().requestAuthorization(options: authOptions, completionHandler: { _, _ in })
     UNUserNotificationCenter.current().delegate = self
 
+    application.registerForRemoteNotifications()
+    NotificationCenter.default.addObserver(self, selector: #selector(tokenRefreshNotification), name: .firInstanceIDTokenRefresh, object: nil)
     return true
   }
   
