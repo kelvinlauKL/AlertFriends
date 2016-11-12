@@ -27,6 +27,14 @@ extension LoginViewController: SegueHandlerType {
   }
 }
 
+// MARK: - Life Cycle
+extension LoginViewController {
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    performSegue(withIdentifier: .mainScreen, sender: nil)
+  }
+}
+
 // MARK: - @IBActions
 private extension LoginViewController {
   @IBAction func loginButtonTapped() {
