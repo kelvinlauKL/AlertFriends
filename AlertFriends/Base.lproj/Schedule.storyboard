@@ -817,11 +817,19 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHC-Bb-1xw">
+                                                    <rect key="frame" x="210" y="11" width="27.5" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="OHC-Bb-1xw" firstAttribute="leading" secondItem="k8U-jo-iMd" secondAttribute="trailing" constant="7.5" id="1Xq-UL-NMI"/>
                                                 <constraint firstItem="ape-gx-RZF" firstAttribute="centerY" secondItem="foF-GF-An8" secondAttribute="centerY" id="PpM-uP-uhi"/>
                                                 <constraint firstItem="ape-gx-RZF" firstAttribute="leading" secondItem="foF-GF-An8" secondAttribute="trailing" constant="8" id="Vzx-2A-ylF"/>
                                                 <constraint firstItem="k8U-jo-iMd" firstAttribute="leading" secondItem="ape-gx-RZF" secondAttribute="trailing" constant="8" id="ZTn-yO-wuD"/>
+                                                <constraint firstItem="OHC-Bb-1xw" firstAttribute="centerY" secondItem="k8U-jo-iMd" secondAttribute="centerY" id="aon-Fl-5d0"/>
                                                 <constraint firstItem="k8U-jo-iMd" firstAttribute="centerY" secondItem="ape-gx-RZF" secondAttribute="centerY" id="hbG-3Y-VoN"/>
                                                 <constraint firstItem="foF-GF-An8" firstAttribute="centerY" secondItem="536-WJ-iwX" secondAttribute="centerY" id="rAU-Wz-MYw"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="foF-GF-An8" secondAttribute="leading" id="wZC-li-UHC"/>
@@ -849,13 +857,19 @@
                                                     <rect key="frame" x="0.0" y="4" width="375" height="20.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uam-xa-dR1">
-                                                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="125" height="20.5"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minutes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEw-mE-awE">
-                                                            <rect key="frame" x="187.5" y="0.0" width="187.5" height="20.5"/>
+                                                            <rect key="frame" x="125" y="0.0" width="125" height="20.5"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhJ-qK-qPI">
+                                                            <rect key="frame" x="250" y="0.0" width="125" height="20.5"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -891,6 +905,7 @@
                     <connections>
                         <outlet property="hoursLabel" destination="ape-gx-RZF" id="07c-mj-PzQ"/>
                         <outlet property="minutesLabel" destination="k8U-jo-iMd" id="XKO-9C-oBS"/>
+                        <outlet property="secondsLabel" destination="OHC-Bb-1xw" id="Rnv-OP-7At"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wsK-9j-rJk" userLabel="First Responder" sceneMemberID="firstResponder"/>

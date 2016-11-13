@@ -56,6 +56,19 @@ extension TimerViewController {
       timerString += "\(seconds)"
     }
     timerLabel.text = timerString
+    
+    if duration <= 0 {
+      let alertController = UIAlertController(title: nil, message: "Contacts have been notified that you haven't checked in.", preferredStyle: .alert)
+      let alertAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
+        self.dismiss(animated: true, completion: nil)
+      })
+      
+      timer.invalidate()
+      timer = nil
+      alertController.addAction(alertAction)
+      present(alertController, animated: true, completion: nil)
+      
+    }
     duration -= 1
   }
 }

@@ -63,6 +63,7 @@ struct Event {
     let leftoverMinutes = minutes % 60
     let hours = minutes / 60
     
-    return "\(hours)h \(leftoverMinutes)m"
+    let leftoverSeconds = minutes % 60
+    return "\(hours)h \(leftoverMinutes)m \(leftoverSeconds)s"
   }
 }
