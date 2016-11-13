@@ -88,7 +88,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n6D-fX-LxM" id="poI-I9-V4i">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -104,7 +104,7 @@
                     <navigationItem key="navigationItem" id="Aqy-vP-P0q">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="nNj-o9-BjB">
                             <connections>
-                                <segue destination="kYn-0h-nqD" kind="show" id="1eb-bT-b1q"/>
+                                <segue destination="kYn-0h-nqD" kind="show" identifier="toAddVC" id="1eb-bT-b1q"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

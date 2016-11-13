@@ -7,12 +7,11 @@
 //
 
 import UIKit
-class ListOfContactTableViewController: UITableViewController {
+class ListOfContactTableViewController: UITableViewController, AddContactDelegate {
     var contactList = [Contact]()
     
   override func viewDidLoad() {
     super.viewDidLoad()
-    tableView.reloadData()
 
     let contact1 = Contact(name: "Alan", email: "anEmail@gmail.com", phoneNumber: "341-513-5501"),
     contact2 = Contact(name: "Brian", email: "brian@gmail.com", phoneNumber: "341-513-5501"),
@@ -37,6 +36,14 @@ class ListOfContactTableViewController: UITableViewController {
     // self.navigationItem.rightBarButtonItem = self.editButtonItem()
   }
   
+    func didCreateContact(_ contact: Contact) {
+        self.contactList.append(contact)
+        print("Updated List---")
+        print(contactList)
+        tableView.reloadData()
+    }
+    
+    
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
@@ -52,7 +59,6 @@ class ListOfContactTableViewController: UITableViewController {
   }
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-    
     let contact = contactList[indexPath.row]
     cell.textLabel?.text = contact.name
     
@@ -62,14 +68,17 @@ class ListOfContactTableViewController: UITableViewController {
    // In a storyboard-based application, you will often want to do a little preparation before navigation
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
+//    if (segue.identifier == "toAddVC") {
+    if let addVC = segue.destination as? AddContactViewController {
+           addVC.delegate = self
+    }
+//    }
+    
     if let detailVC = segue.destination as? DetailContactViewController,
         let indexPath = tableView.indexPathForSelectedRow {
         let contact = contactList[indexPath.row]
         detailVC.contactDetail = contact
     }
-//    else if let addVC = segue.destination as? AddContactViewController {
-//        addVC.delegate = self
-//    }
     
    // Get the new view controller using segue.destinationViewController.
    // Pass the selected object to the new view controller.

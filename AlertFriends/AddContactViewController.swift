@@ -50,7 +50,7 @@ final class AddContactViewController: UIViewController {
     let newContact = Contact(name: "\(nameTextField.text ?? "")", email: "\(phoneTextField.text ?? "")", phoneNumber: "\(emailTextField.text ?? "")")
     
     delegate?.didCreateContact(newContact)
-    print("New contactlist-- ")
+    print("After added-- ")
     print(contactList)
     
     navigationController!.popViewController(animated: true)
@@ -76,9 +76,6 @@ final class AddContactViewController: UIViewController {
    // MARK: - Navigation
    // In a storyboard-based application, you will often want to do a little preparation before navigation
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//    if let listVC = segue.destination as? ListOfContactTableViewController {
-//        listVC.contactDetail = contact
-//    }
    }
     
    // Get the new view controller using segue.destinationViewController.
