@@ -17,7 +17,7 @@ final class ScheduleViewController: UIViewController {
 // MARK: - SegueHandlerType
 extension ScheduleViewController: SegueHandlerType {
   enum SegueIdentifier: String {
-    case createEvent
+    case createEvent, eventDetails
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -25,6 +25,10 @@ extension ScheduleViewController: SegueHandlerType {
     case .createEvent:
       let createVC = segue.destination as! CreateEventViewController
       createVC.delegate = self
+    case .eventDetails:
+      guard let eventIndex = sender as? Int else { fatalError() }
+      let detailVC = segue.destination as! EventDetailsTableViewController
+      detailVC.event = events[eventIndex]
     }
   }
 }
@@ -57,6 +61,15 @@ extension ScheduleViewController: UICollectionViewDataSource {
     guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: ScheduleHeader.reuseIdentifier, for: indexPath) as? ScheduleHeader else { fatalError() }
     return header
   }  
+}
+
+// MARK: - UICollectionViewDelegate
+extension ScheduleViewController: UICollectionViewDelegate {
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    collectionView.deselectItem(at: indexPath, animated: true)
+    
+    performSegue(withIdentifier: .eventDetails, sender: indexPath.item)
+  }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout

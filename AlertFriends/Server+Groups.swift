@@ -8,7 +8,7 @@
 
 extension Server {
   static var testGroups: [Group] {
-    let group1 = Group(name: "Company", people: [], color: .red)
+    let group1 = Group(name: "Company", people: Server.companyContacts, color: .red)
     let group2 = Group(name: "Close Friends", people: [], color: .orange)
     let group3 = Group(name: "Acquaintances", people: [], color: .green)
     let group4 = Group(name: "Family", people: [], color: .yellow)
@@ -17,7 +17,7 @@ extension Server {
   }
   
   static func fetchGroups(completion: @escaping ([Group]) -> ()) {
-    let group1 = Group(name: "Company", people: [], color: .red)
+    let group1 = Group(name: "Company", people: Server.companyContacts, color: .red)
     let group2 = Group(name: "Close Friends", people: [], color: .orange)
     let group3 = Group(name: "Acquaintances", people: [], color: .green)
     let group4 = Group(name: "Family", people: [], color: .yellow)

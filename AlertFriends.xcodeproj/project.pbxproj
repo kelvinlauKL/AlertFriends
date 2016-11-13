@@ -33,6 +33,8 @@
 		60876C7E1DD8D542001E6F33 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60876C7D1DD8D542001E6F33 /* GroupCell.swift */; };
 		60876C801DD8D5D2001E6F33 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60876C7F1DD8D5D2001E6F33 /* Group.swift */; };
 		60876C821DD8DA90001E6F33 /* Server+Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60876C811DD8DA90001E6F33 /* Server+Groups.swift */; };
+		60876C841DD8EE22001E6F33 /* EventDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60876C831DD8EE22001E6F33 /* EventDetailsTableViewController.swift */; };
+		60876C861DD8F321001E6F33 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60876C851DD8F321001E6F33 /* TimerViewController.swift */; };
 		608D0FB71DD7B8C1004860BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608D0FB61DD7B8C1004860BF /* AppDelegate.swift */; };
 		608D0FBC1DD7B8C1004860BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608D0FBA1DD7B8C1004860BF /* Main.storyboard */; };
 		608D0FBE1DD7B8C1004860BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 608D0FBD1DD7B8C1004860BF /* Assets.xcassets */; };
@@ -71,6 +73,8 @@
 		60876C7D1DD8D542001E6F33 /* GroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		60876C7F1DD8D5D2001E6F33 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		60876C811DD8DA90001E6F33 /* Server+Groups.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Server+Groups.swift"; sourceTree = "<group>"; };
+		60876C831DD8EE22001E6F33 /* EventDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsTableViewController.swift; sourceTree = "<group>"; };
+		60876C851DD8F321001E6F33 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		608D0FB31DD7B8C1004860BF /* AlertFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		608D0FB61DD7B8C1004860BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		608D0FBB1DD7B8C1004860BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -190,7 +194,9 @@
 				603410021DD7FB5000C040F7 /* DurationTableViewController.swift */,
 				603410061DD807E400C040F7 /* ThreatTableViewController.swift */,
 				60340FFC1DD7E58E00C040F7 /* AddContactViewController.swift */,
+				60876C831DD8EE22001E6F33 /* EventDetailsTableViewController.swift */,
 				60340FFE1DD7E5F500C040F7 /* ListOfContactTableViewController.swift */,
+				60876C851DD8F321001E6F33 /* TimerViewController.swift */,
 				60876C7B1DD8D4B6001E6F33 /* GroupsTableViewController.swift */,
 			);
 			name = Controllers;
@@ -368,6 +374,7 @@
 				608D0FCD1DD7B99A004860BF /* LoginViewController.swift in Sources */,
 				60340FDF1DD7BB1A00C040F7 /* SegueHandlerType.swift in Sources */,
 				60340FF31DD7DA1B00C040F7 /* Event.swift in Sources */,
+				60876C841DD8EE22001E6F33 /* EventDetailsTableViewController.swift in Sources */,
 				603410071DD807E400C040F7 /* ThreatTableViewController.swift in Sources */,
 				60340FF51DD7DABE00C040F7 /* Server+Events.swift in Sources */,
 				60340FEB1DD7C8B900C040F7 /* UIViewController+Alert.swift in Sources */,
@@ -377,6 +384,7 @@
 				60340FED1DD7D09200C040F7 /* ScheduleViewController.swift in Sources */,
 				608D0FB71DD7B8C1004860BF /* AppDelegate.swift in Sources */,
 				96F3446D1DD7FC98007C399A /* DetailContactViewController.swift in Sources */,
+				60876C861DD8F321001E6F33 /* TimerViewController.swift in Sources */,
 				60340FFF1DD7E5F500C040F7 /* ListOfContactTableViewController.swift in Sources */,
 				603410051DD7FEB000C040F7 /* CreateEventViewController.swift in Sources */,
 				6034100B1DD8179700C040F7 /* Category.swift in Sources */,

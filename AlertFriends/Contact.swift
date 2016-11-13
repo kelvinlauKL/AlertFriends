@@ -13,9 +13,7 @@ struct Contact {
   var email: String
   var phoneNumber: String
   var image = #imageLiteral(resourceName: "profilePlaceholder")
-}
-
-extension Contact {
+  
   init(name: String, email: String, phoneNumber: String, image: UIImage? = nil) {
     self.name = name
     self.email = email
@@ -27,4 +25,5 @@ extension Contact {
       self.image = #imageLiteral(resourceName: "profilePlaceholder")
     }
   }
+
 }
