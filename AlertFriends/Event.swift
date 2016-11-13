@@ -23,6 +23,17 @@ struct Event {
       }
     }
     
+    var color: UIColor {
+      switch self {
+      case .low:
+        return .green
+      case .medium:
+        return .orange
+      case .high:
+        return .red
+      }
+    }
+    
     static var allValues: [ThreatLevel] {
       return [.low, .medium, .high]
     }
@@ -43,4 +54,15 @@ struct Event {
   var image: UIImage
   var threatLevel: ThreatLevel
   var duration: TimeInterval
+  var targetGroup: Group
+  
+  var durationDescription: String {
+    let seconds = Int(duration)
+    
+    let minutes = seconds / 60
+    let leftoverMinutes = minutes % 60
+    let hours = minutes / 60
+    
+    return "\(hours)h \(leftoverMinutes)m"
+  }
 }

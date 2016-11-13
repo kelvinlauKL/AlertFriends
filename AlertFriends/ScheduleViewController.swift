@@ -23,7 +23,8 @@ extension ScheduleViewController: SegueHandlerType {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     switch segueIdentifierFor(segue: segue) {
     case .createEvent:
-      break
+      let createVC = segue.destination as! CreateEventViewController
+      createVC.delegate = self
     }
   }
 }
@@ -67,6 +68,17 @@ extension ScheduleViewController: UICollectionViewDelegateFlowLayout {
     return CGSize(width: collectionView.frame.width - horizontalInsets, height: collectionView.frame.height / 6)
   }
 }
+
+// MARK: - CreateEventDelegate
+extension ScheduleViewController: CreateEventDelegate {
+  func eventCreated(event: Event) {
+    // TODO: - 
+    events.insert(event, at: 0)
+    let indexPath = IndexPath(item: 0, section: 0)
+    collectionView.insertItems(at: [indexPath])
+  }
+}
+
 // MARK: - @IBActions
 private extension ScheduleViewController {
   @IBAction func addButtonTapped() {
