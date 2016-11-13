@@ -24,6 +24,9 @@
 		60340FFD1DD7E58E00C040F7 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60340FFC1DD7E58E00C040F7 /* AddContactViewController.swift */; };
 		60340FFF1DD7E5F500C040F7 /* ListOfContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60340FFE1DD7E5F500C040F7 /* ListOfContactTableViewController.swift */; };
 		603410011DD7EE4F00C040F7 /* Server+Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603410001DD7EE4F00C040F7 /* Server+Contacts.swift */; };
+		603410031DD7FB5000C040F7 /* DurationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603410021DD7FB5000C040F7 /* DurationTableViewController.swift */; };
+		603410051DD7FEB000C040F7 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603410041DD7FEB000C040F7 /* CreateEventViewController.swift */; };
+		603410071DD807E400C040F7 /* ThreatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603410061DD807E400C040F7 /* ThreatTableViewController.swift */; };
 		608D0FB71DD7B8C1004860BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608D0FB61DD7B8C1004860BF /* AppDelegate.swift */; };
 		608D0FBC1DD7B8C1004860BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608D0FBA1DD7B8C1004860BF /* Main.storyboard */; };
 		608D0FBE1DD7B8C1004860BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 608D0FBD1DD7B8C1004860BF /* Assets.xcassets */; };
@@ -52,6 +55,9 @@
 		60340FFC1DD7E58E00C040F7 /* AddContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		60340FFE1DD7E5F500C040F7 /* ListOfContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfContactTableViewController.swift; sourceTree = "<group>"; };
 		603410001DD7EE4F00C040F7 /* Server+Contacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Server+Contacts.swift"; sourceTree = "<group>"; };
+		603410021DD7FB5000C040F7 /* DurationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DurationTableViewController.swift; sourceTree = "<group>"; };
+		603410041DD7FEB000C040F7 /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		603410061DD807E400C040F7 /* ThreatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreatTableViewController.swift; sourceTree = "<group>"; };
 		608D0FB31DD7B8C1004860BF /* AlertFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		608D0FB61DD7B8C1004860BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		608D0FBB1DD7B8C1004860BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -164,6 +170,9 @@
 			children = (
 				608D0FCC1DD7B99A004860BF /* LoginViewController.swift */,
 				60340FEC1DD7D09200C040F7 /* ScheduleViewController.swift */,
+				603410041DD7FEB000C040F7 /* CreateEventViewController.swift */,
+				603410021DD7FB5000C040F7 /* DurationTableViewController.swift */,
+				603410061DD807E400C040F7 /* ThreatTableViewController.swift */,
 				60340FFC1DD7E58E00C040F7 /* AddContactViewController.swift */,
 				60340FFE1DD7E5F500C040F7 /* ListOfContactTableViewController.swift */,
 			);
@@ -329,9 +338,11 @@
 				60340FF91DD7E4E900C040F7 /* Contact.swift in Sources */,
 				60340FE81DD7BE9200C040F7 /* Server+Auth.swift in Sources */,
 				60340FF11DD7D4B100C040F7 /* EventCell.swift in Sources */,
+				603410031DD7FB5000C040F7 /* DurationTableViewController.swift in Sources */,
 				608D0FCD1DD7B99A004860BF /* LoginViewController.swift in Sources */,
 				60340FDF1DD7BB1A00C040F7 /* SegueHandlerType.swift in Sources */,
 				60340FF31DD7DA1B00C040F7 /* Event.swift in Sources */,
+				603410071DD807E400C040F7 /* ThreatTableViewController.swift in Sources */,
 				60340FF51DD7DABE00C040F7 /* Server+Events.swift in Sources */,
 				60340FEB1DD7C8B900C040F7 /* UIViewController+Alert.swift in Sources */,
 				60340FFD1DD7E58E00C040F7 /* AddContactViewController.swift in Sources */,
@@ -340,6 +351,7 @@
 				60340FED1DD7D09200C040F7 /* ScheduleViewController.swift in Sources */,
 				608D0FB71DD7B8C1004860BF /* AppDelegate.swift in Sources */,
 				60340FFF1DD7E5F500C040F7 /* ListOfContactTableViewController.swift in Sources */,
+				603410051DD7FEB000C040F7 /* CreateEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

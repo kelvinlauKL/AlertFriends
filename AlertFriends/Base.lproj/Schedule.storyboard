@@ -177,7 +177,7 @@
         <!--Create Event-->
         <scene sceneID="NrF-Q7-5od">
             <objects>
-                <tableViewController id="Hcx-pl-3xN" sceneMemberID="viewController">
+                <tableViewController id="Hcx-pl-3xN" customClass="CreateEventViewController" customModule="AlertFriends" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="7lL-ln-0y3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -266,6 +266,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="2dm-ca-lr2"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="eventName" destination="6ao-ti-FPN" id="D5d-Aq-NRs"/>
                         <segue destination="zGS-fm-0Ef" kind="show" identifier="threatSelector" id="qUF-OB-g3g"/>
                         <segue destination="UoV-Pc-LEm" kind="show" identifier="durationSelector" id="vyH-R5-J51"/>
                     </connections>
@@ -274,10 +275,10 @@
             </objects>
             <point key="canvasLocation" x="1285.5999999999999" y="1476.6116941529237"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Add Duration-->
         <scene sceneID="gI5-7R-1hk">
             <objects>
-                <tableViewController id="UoV-Pc-LEm" sceneMemberID="viewController">
+                <tableViewController id="UoV-Pc-LEm" customClass="DurationTableViewController" customModule="AlertFriends" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="h2G-eU-amR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -291,6 +292,34 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Ef-VU-UDW" id="536-WJ-iwX">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Duration:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foF-GF-An8">
+                                                    <rect key="frame" x="8" y="11.5" width="126" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ape-gx-RZF">
+                                                    <rect key="frame" x="142" y="11.5" width="19" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8U-jo-iMd">
+                                                    <rect key="frame" x="169" y="11.5" width="33.5" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ape-gx-RZF" firstAttribute="centerY" secondItem="foF-GF-An8" secondAttribute="centerY" id="PpM-uP-uhi"/>
+                                                <constraint firstItem="ape-gx-RZF" firstAttribute="leading" secondItem="foF-GF-An8" secondAttribute="trailing" constant="8" id="Vzx-2A-ylF"/>
+                                                <constraint firstItem="k8U-jo-iMd" firstAttribute="leading" secondItem="ape-gx-RZF" secondAttribute="trailing" constant="8" id="ZTn-yO-wuD"/>
+                                                <constraint firstItem="k8U-jo-iMd" firstAttribute="centerY" secondItem="ape-gx-RZF" secondAttribute="centerY" id="hbG-3Y-VoN"/>
+                                                <constraint firstItem="foF-GF-An8" firstAttribute="centerY" secondItem="536-WJ-iwX" secondAttribute="centerY" id="rAU-Wz-MYw"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="foF-GF-An8" secondAttribute="leading" id="wZC-li-UHC"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="173" id="PWh-yE-dNw">
@@ -302,6 +331,10 @@
                                             <subviews>
                                                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kGM-jC-A9u">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="172"/>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="UoV-Pc-LEm" id="K69-DR-ynE"/>
+                                                        <outlet property="delegate" destination="UoV-Pc-LEm" id="jal-bp-Mbo"/>
+                                                    </connections>
                                                 </pickerView>
                                             </subviews>
                                             <constraints>
@@ -320,15 +353,26 @@
                             <outlet property="delegate" destination="UoV-Pc-LEm" id="eYz-rj-2go"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Add Duration" id="o9F-WV-BAM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="ejb-fd-Y0N">
+                            <connections>
+                                <action selector="doneButtonTapped" destination="UoV-Pc-LEm" id="fuR-Ce-IRw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="hoursLabel" destination="ape-gx-RZF" id="07c-mj-PzQ"/>
+                        <outlet property="minutesLabel" destination="k8U-jo-iMd" id="XKO-9C-oBS"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wsK-9j-rJk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2085.5999999999999" y="1755.4722638680662"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Threat Table View Controller-->
         <scene sceneID="DRb-3a-APi">
             <objects>
-                <tableViewController id="zGS-fm-0Ef" sceneMemberID="viewController">
+                <tableViewController id="zGS-fm-0Ef" customClass="ThreatTableViewController" customModule="AlertFriends" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="120" sectionHeaderHeight="18" sectionFooterHeight="18" id="FzO-aQ-Tf6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
