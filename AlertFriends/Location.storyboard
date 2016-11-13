@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 1-->
+        <!--Maps-->
         <scene sceneID="XFn-X0-1L2">
             <objects>
                 <viewController id="CKb-Fc-S4M" customClass="LocationViewController" customModule="AlertFriends" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,7 +25,6 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                             </mapView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="yrP-cx-a4W" secondAttribute="trailing" id="6gp-1l-oGS"/>
                             <constraint firstItem="yrP-cx-a4W" firstAttribute="top" secondItem="lID-ac-8UV" secondAttribute="bottom" id="GI0-fe-yJw"/>
@@ -33,7 +32,7 @@
                             <constraint firstItem="yrP-cx-a4W" firstAttribute="leading" secondItem="tap-YY-vNM" secondAttribute="leading" id="xdJ-j9-X2t"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="wFW-6h-qOJ"/>
+                    <tabBarItem key="tabBarItem" title="Maps" id="wFW-6h-qOJ"/>
                     <connections>
                         <outlet property="mapView" destination="yrP-cx-a4W" id="daY-f4-Rse"/>
                     </connections>
