@@ -38,8 +38,6 @@ class ListOfContactTableViewController: UITableViewController, AddContactDelegat
   
     func didCreateContact(_ contact: Contact) {
         self.contactList.append(contact)
-        print("Updated List---")
-        print(contactList)
         tableView.reloadData()
     }
     
@@ -68,11 +66,9 @@ class ListOfContactTableViewController: UITableViewController, AddContactDelegat
    // In a storyboard-based application, you will often want to do a little preparation before navigation
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
-//    if (segue.identifier == "toAddVC") {
     if let addVC = segue.destination as? AddContactViewController {
            addVC.delegate = self
     }
-//    }
     
     if let detailVC = segue.destination as? DetailContactViewController,
         let indexPath = tableView.indexPathForSelectedRow {
