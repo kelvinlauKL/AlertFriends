@@ -9,14 +9,7 @@
 import UIKit
 
 final class ScheduleViewController: UIViewController {
-  @IBOutlet fileprivate var collectionView: UICollectionView! {
-    didSet {
-      let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-      let horizontalInsets = layout.sectionInset.left + layout.sectionInset.right
-      
-      layout.itemSize = CGSize(width: collectionView.frame.width - horizontalInsets, height: collectionView.frame.height / 6)
-    }
-  }
+  @IBOutlet fileprivate var collectionView: UICollectionView!
   
   fileprivate var events: [Event] = []
 }
@@ -25,6 +18,11 @@ final class ScheduleViewController: UIViewController {
 extension ScheduleViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+    let horizontalInsets = layout.sectionInset.left + layout.sectionInset.right
+    
+    layout.itemSize = CGSize(width: collectionView.frame.width - horizontalInsets, height: collectionView.frame.height / 6)
     
     Server.fetchEvents { events in
       let previousCountOfEvents = events.count
