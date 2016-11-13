@@ -16,8 +16,9 @@ final class ScheduleViewController: UIViewController {
 
 // MARK: - Life Cycle
 extension ScheduleViewController {
-  override func viewDidLoad() {
-    super.viewDidLoad()
+
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
     
     let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
     let horizontalInsets = layout.sectionInset.left + layout.sectionInset.right
