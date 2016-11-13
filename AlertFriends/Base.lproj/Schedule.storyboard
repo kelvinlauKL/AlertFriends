@@ -169,6 +169,7 @@
                     <connections>
                         <outlet property="collectionView" destination="MfS-mt-NbM" id="7Hn-en-246"/>
                         <segue destination="Hcx-pl-3xN" kind="show" identifier="createEvent" id="IzW-ET-cBB"/>
+                        <segue destination="Kvo-Km-VD9" kind="show" identifier="eventDetails" id="Vr6-CY-MDO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Wa-aN-avA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -408,6 +409,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NE3-8c-ygv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1285.5999999999999" y="1476.6116941529237"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="kpZ-y0-5Gj">
+            <objects>
+                <tableViewController id="Kvo-Km-VD9" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hXN-FD-Oet">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="NRx-r7-XRV">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NRx-r7-XRV" id="rt2-ZI-eSX">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Kvo-Km-VD9" id="gkf-nX-KW8"/>
+                            <outlet property="delegate" destination="Kvo-Km-VD9" id="qUQ-gQ-YMM"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vJX-i5-u23" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="572" y="2165"/>
         </scene>
         <!--Select Groups-->
         <scene sceneID="qqS-58-hmO">
