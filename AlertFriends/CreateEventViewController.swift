@@ -127,7 +127,7 @@ extension CreateEventViewController: UICollectionViewDelegateFlowLayout {
 // MARK: - UITableViewDelegate 
 extension CreateEventViewController {
   fileprivate enum Row: Int {
-    case name, threatLevel, duration
+    case name, threatLevel, duration, targetGroup
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
