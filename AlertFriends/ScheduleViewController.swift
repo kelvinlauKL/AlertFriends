@@ -73,6 +73,9 @@ extension ScheduleViewController: UICollectionViewDelegateFlowLayout {
 extension ScheduleViewController: CreateEventDelegate {
   func eventCreated(event: Event) {
     // TODO: - 
+    events.insert(event, at: 0)
+    let indexPath = IndexPath(item: 0, section: 0)
+    collectionView.insertItems(at: [indexPath])
   }
 }
 

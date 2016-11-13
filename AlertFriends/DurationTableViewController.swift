@@ -25,7 +25,7 @@ final class DurationTableViewController: UITableViewController {
 // MARK: - UIPickerControllerDelegate
 extension DurationTableViewController: UIPickerViewDataSource {
   fileprivate enum Component: Int {
-    case minutes, hours
+    case hours, minutes
   }
   
   fileprivate var minutes: [Int] {

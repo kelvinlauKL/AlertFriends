@@ -14,6 +14,7 @@ final class EventCell: UICollectionViewCell {
   @IBOutlet fileprivate var titleLabel: UILabel!
   @IBOutlet fileprivate var threatLabel: UILabel!
   @IBOutlet fileprivate var colorImageView: UIImageView!
+  @IBOutlet fileprivate var durationLabel: UILabel!
   
   var event: Event! {
     didSet {
@@ -21,6 +22,7 @@ final class EventCell: UICollectionViewCell {
       titleLabel.text = event.name
       threatLabel.text = "Threat level: \(event.threatLevel.description)"
       colorImageView.image = event.threatLevel.getColorImage(forRect: colorImageView.frame)
+      durationLabel.text = "Duration: \(event.durationDescription)"
     }
   }
   
