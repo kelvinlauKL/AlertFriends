@@ -15,9 +15,9 @@ struct Event {
     func getColorImage(forRect rect: CGRect) -> UIImage {
       switch self {
       case .low:
-        return #imageLiteral(resourceName: "redDot")
+        return #imageLiteral(resourceName: "greenDot")
       case .medium:
-        return #imageLiteral(resourceName: "redDot")
+        return #imageLiteral(resourceName: "orangeDot")
       case .high:
         return #imageLiteral(resourceName: "redDot")
       }
