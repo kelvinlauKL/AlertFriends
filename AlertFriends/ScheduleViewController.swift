@@ -26,13 +26,8 @@ extension ScheduleViewController {
     layout.itemSize = CGSize(width: collectionView.frame.width - horizontalInsets, height: collectionView.frame.height / 6)
     
     Server.fetchEvents { events in
-      let previousCountOfEvents = events.count
       self.events.append(contentsOf: events)
-      let newCountOfEvents = events.count
-      
-      let indexPaths = (previousCountOfEvents..<newCountOfEvents).map { IndexPath(item: $0, section: 0) }
-      
-      self.collectionView.insertItems(at: indexPaths)
+      self.collectionView.reloadData()
     }
   }
 }
