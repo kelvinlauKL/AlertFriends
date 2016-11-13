@@ -15,11 +15,22 @@ struct Event {
     func getColorImage(forRect rect: CGRect) -> UIImage {
       switch self {
       case .low:
-        return #imageLiteral(resourceName: "redDot")
+        return #imageLiteral(resourceName: "greenDot")
       case .medium:
-        return #imageLiteral(resourceName: "redDot")
+        return #imageLiteral(resourceName: "orangeDot")
       case .high:
         return #imageLiteral(resourceName: "redDot")
+      }
+    }
+    
+    var color: UIColor {
+      switch self {
+      case .low:
+        return .green
+      case .medium:
+        return .orange
+      case .high:
+        return .red
       }
     }
     
@@ -43,4 +54,15 @@ struct Event {
   var image: UIImage
   var threatLevel: ThreatLevel
   var duration: TimeInterval
+  var targetGroup: Group
+  
+  var durationDescription: String {
+    let seconds = Int(duration)
+    
+    let minutes = seconds / 60
+    let leftoverMinutes = minutes % 60
+    let hours = minutes / 60
+    
+    return "\(hours)h \(leftoverMinutes)m"
+  }
 }
