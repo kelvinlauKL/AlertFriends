@@ -8,15 +8,13 @@
 
 import UIKit
 class ListOfContactTableViewController: UITableViewController {
-  //    var contactsList = [Contacts]()
-  var contactsList = [0,1,2,3,4,5]
-  
-  
-  @IBOutlet weak var nameLabel: UILabel!
-  
+//  var contactsList = [0,1,2,3,4,5]
+    var contactList = [Contact]()
+    
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+
+//    self.tableView.reloadData()
     
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = false
@@ -35,13 +33,13 @@ class ListOfContactTableViewController: UITableViewController {
   }
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     // #warning Incomplete implementation, return the number of rows
-    return contactsList.count
+    return contactList.count
   }
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-    let contact = contactsList[indexPath.row]
-    //        nameLabel.text = contact.name
-    cell.textLabel?.text = "name"
+    let contact = contactList[indexPath.row]
+    cell.textLabel?.text = contact.name
+    
     return cell
   }
   /*

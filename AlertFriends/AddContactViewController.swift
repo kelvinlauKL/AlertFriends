@@ -22,18 +22,14 @@ final class AddContactViewController: UIViewController {
   }
   
   @IBAction func savePressed(_ sender: UIButton) {
-    
-    print("Save pressed")
-    
     let newContact = Contact(name: "NAME", email: "anEmail@gmail.com", phoneNumber: "341-513-5501")
     //
     //        newContact.name = nameTextField.text ?? ""
-    //        print(newContact.name)
     //        newContact.phone = phoneTextField.text ?? ""
     //        newContact.email = emailTextField.text ?? ""
     
     contactList.append(newContact)
-    
+    self.navigationController!.popViewController(animated: true)
   }
   
   @IBAction func cancelPressed(_ sender: UIButton) {
