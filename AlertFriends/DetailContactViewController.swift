@@ -9,11 +9,19 @@
 import UIKit
 
 class DetailContactViewController: UIViewController {
-
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    
+    var contactDetail = Contact(name: "Alan", email: "anEmail@gmail.com", phoneNumber: "341-513-5501")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        nameLabel.text = contactDetail.name
+        emailLabel.text = contactDetail.email
+        phoneLabel.text = contactDetail.phoneNumber
     }
 
     override func didReceiveMemoryWarning() {

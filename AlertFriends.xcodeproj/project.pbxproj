@@ -28,6 +28,7 @@
 		608D0FBE1DD7B8C1004860BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 608D0FBD1DD7B8C1004860BF /* Assets.xcassets */; };
 		608D0FC11DD7B8C1004860BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608D0FBF1DD7B8C1004860BF /* LaunchScreen.storyboard */; };
 		608D0FCD1DD7B99A004860BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608D0FCC1DD7B99A004860BF /* LoginViewController.swift */; };
+		96F3446D1DD7FC98007C399A /* DetailContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3446C1DD7FC98007C399A /* DetailContactViewController.swift */; };
 		9AF893DADAA52411AD00DFB2 /* Pods_AlertFriends.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E16A567A9C2BE65CAF2DC9 /* Pods_AlertFriends.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		608D0FC01DD7B8C1004860BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		608D0FC21DD7B8C1004860BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		608D0FCC1DD7B99A004860BF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		96F3446C1DD7FC98007C399A /* DetailContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailContactViewController.swift; sourceTree = "<group>"; };
 		A53C29A688B7760BD9C2B251 /* Pods-AlertFriends.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlertFriends.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlertFriends/Pods-AlertFriends.release.xcconfig"; sourceTree = "<group>"; };
 		FE51125624AB3D3CC1E9F1C6 /* Pods-AlertFriends.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlertFriends.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlertFriends/Pods-AlertFriends.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +163,7 @@
 			children = (
 				608D0FCC1DD7B99A004860BF /* LoginViewController.swift */,
 				60340FEC1DD7D09200C040F7 /* ScheduleViewController.swift */,
+				96F3446C1DD7FC98007C399A /* DetailContactViewController.swift */,
 				60340FFC1DD7E58E00C040F7 /* AddContactViewController.swift */,
 				60340FFE1DD7E5F500C040F7 /* ListOfContactTableViewController.swift */,
 			);
@@ -335,6 +338,7 @@
 				60340FEF1DD7D10E00C040F7 /* ScheduleHeader.swift in Sources */,
 				60340FED1DD7D09200C040F7 /* ScheduleViewController.swift in Sources */,
 				608D0FB71DD7B8C1004860BF /* AppDelegate.swift in Sources */,
+				96F3446D1DD7FC98007C399A /* DetailContactViewController.swift in Sources */,
 				60340FFF1DD7E5F500C040F7 /* ListOfContactTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
