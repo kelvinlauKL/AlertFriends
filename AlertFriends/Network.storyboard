@@ -13,7 +13,7 @@
         <scene sceneID="cXW-Wk-IRx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9HT-fy-hIf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Network" id="Frd-aN-Sf5"/>
+                    <tabBarItem key="tabBarItem" title="Network" image="contactsTabIcon" id="Frd-aN-Sf5"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ol8-6Q-t1d">
@@ -194,4 +194,7 @@
             <point key="canvasLocation" x="3001" y="1477"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="contactsTabIcon" width="32" height="33"/>
+    </resources>
 </document>

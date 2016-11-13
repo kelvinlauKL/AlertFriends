@@ -1034,7 +1034,7 @@
         <scene sceneID="sWH-Gq-eIc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xkA-TL-LbB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Schedule" id="p3B-4C-Msd"/>
+                    <tabBarItem key="tabBarItem" title="Schedule" image="scheduleIcon" id="p3B-4C-Msd"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yfC-f2-lyk">
@@ -1055,5 +1055,6 @@
         <image name="clock" width="100" height="100"/>
         <image name="groceryShopping" width="232" height="226"/>
         <image name="redDot" width="100" height="100"/>
+        <image name="scheduleIcon" width="26" height="25"/>
     </resources>
 </document>
