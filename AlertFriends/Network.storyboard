@@ -1,29 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9HT-fy-hIf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="kK4-7B-a9M">
-            <objects>
-                <viewController id="KEy-Go-A58" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HPo-QV-yxT"/>
-                        <viewControllerLayoutGuide type="bottom" id="cSu-hR-6AB"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8Ue-Cw-aI2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="1pe-Vv-RGo"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ifj-1g-Dan" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2194" y="1477"/>
-        </scene>
         <!--Network-->
         <scene sceneID="cXW-Wk-IRx">
             <objects>
@@ -31,19 +16,68 @@
                     <tabBarItem key="tabBarItem" title="Network" id="Frd-aN-Sf5"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4_7.fullscreen"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ol8-6Q-t1d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="KEy-Go-A58" kind="relationship" relationship="rootViewController" id="kRw-AZ-wTr"/>
+                        <segue destination="eKr-Q6-B7a" kind="relationship" relationship="rootViewController" id="3Mv-xW-TVJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1qj-J2-qyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1492" y="1476.6116941529237"/>
+        </scene>
+        <!--List Of Contact Table View Controller-->
+        <scene sceneID="EI6-tb-tst">
+            <objects>
+                <tableViewController id="eKr-Q6-B7a" customClass="ListOfContactTableViewController" customModule="AlertFriends" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BLf-oH-p5K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="n6D-fX-LxM" customClass="ContactTableViewCell" customModule="AlertFriends" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n6D-fX-LxM" id="poI-I9-V4i">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eKr-Q6-B7a" id="Iki-3f-iyB"/>
+                            <outlet property="delegate" destination="eKr-Q6-B7a" id="byt-1u-iDZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Aqy-vP-P0q"/>
+                    <connections>
+                        <segue destination="kYn-0h-nqD" kind="show" id="z0R-rz-gbw"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cIi-WL-yXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2218" y="1477"/>
+        </scene>
+        <!--Add Contact View Controller-->
+        <scene sceneID="leE-Ts-lIY">
+            <objects>
+                <viewController id="kYn-0h-nqD" customClass="AddContactViewController" customModule="AlertFriends" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ox4-aZ-l1E"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lrq-iK-Um1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Y1-LB-gqX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I3A-oK-Epf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2897" y="1477"/>
         </scene>
     </scenes>
 </document>
