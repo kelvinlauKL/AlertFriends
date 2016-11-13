@@ -50,8 +50,8 @@ final class AddContactViewController: UIViewController {
     let newContact = Contact(name: "\(nameTextField.text ?? "")", email: "\(phoneTextField.text ?? "")", phoneNumber: "\(emailTextField.text ?? "")")
     
     delegate?.didCreateContact(newContact)
-    print("After added-- ")
-    print(contactList)
+//    print("After added-- ")
+//    print(contactList)
     
     navigationController!.popViewController(animated: true)
   }
