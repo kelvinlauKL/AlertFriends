@@ -29,6 +29,10 @@
 		603410071DD807E400C040F7 /* ThreatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603410061DD807E400C040F7 /* ThreatTableViewController.swift */; };
 		603410091DD8172300C040F7 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603410081DD8172300C040F7 /* ImageCollectionViewCell.swift */; };
 		6034100B1DD8179700C040F7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6034100A1DD8179700C040F7 /* Category.swift */; };
+		60876C7C1DD8D4B6001E6F33 /* GroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60876C7B1DD8D4B6001E6F33 /* GroupsTableViewController.swift */; };
+		60876C7E1DD8D542001E6F33 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60876C7D1DD8D542001E6F33 /* GroupCell.swift */; };
+		60876C801DD8D5D2001E6F33 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60876C7F1DD8D5D2001E6F33 /* Group.swift */; };
+		60876C821DD8DA90001E6F33 /* Server+Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60876C811DD8DA90001E6F33 /* Server+Groups.swift */; };
 		608D0FB71DD7B8C1004860BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608D0FB61DD7B8C1004860BF /* AppDelegate.swift */; };
 		608D0FBC1DD7B8C1004860BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 608D0FBA1DD7B8C1004860BF /* Main.storyboard */; };
 		608D0FBE1DD7B8C1004860BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 608D0FBD1DD7B8C1004860BF /* Assets.xcassets */; };
@@ -62,6 +66,10 @@
 		603410061DD807E400C040F7 /* ThreatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreatTableViewController.swift; sourceTree = "<group>"; };
 		603410081DD8172300C040F7 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		6034100A1DD8179700C040F7 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		60876C7B1DD8D4B6001E6F33 /* GroupsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsTableViewController.swift; sourceTree = "<group>"; };
+		60876C7D1DD8D542001E6F33 /* GroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		60876C7F1DD8D5D2001E6F33 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		60876C811DD8DA90001E6F33 /* Server+Groups.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Server+Groups.swift"; sourceTree = "<group>"; };
 		608D0FB31DD7B8C1004860BF /* AlertFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		608D0FB61DD7B8C1004860BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		608D0FBB1DD7B8C1004860BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -118,6 +126,7 @@
 				60340FE71DD7BE9200C040F7 /* Server+Auth.swift */,
 				60340FF41DD7DABE00C040F7 /* Server+Events.swift */,
 				603410001DD7EE4F00C040F7 /* Server+Contacts.swift */,
+				60876C811DD8DA90001E6F33 /* Server+Groups.swift */,
 			);
 			name = Server;
 			sourceTree = "<group>";
@@ -179,6 +188,7 @@
 				603410061DD807E400C040F7 /* ThreatTableViewController.swift */,
 				60340FFC1DD7E58E00C040F7 /* AddContactViewController.swift */,
 				60340FFE1DD7E5F500C040F7 /* ListOfContactTableViewController.swift */,
+				60876C7B1DD8D4B6001E6F33 /* GroupsTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -190,6 +200,7 @@
 				60340FF01DD7D4B100C040F7 /* EventCell.swift */,
 				603410081DD8172300C040F7 /* ImageCollectionViewCell.swift */,
 				60340FFA1DD7E55800C040F7 /* ContactTableViewCell.swift */,
+				60876C7D1DD8D542001E6F33 /* GroupCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -200,6 +211,7 @@
 				60340FF21DD7DA1B00C040F7 /* Event.swift */,
 				60340FF81DD7E4E900C040F7 /* Contact.swift */,
 				6034100A1DD8179700C040F7 /* Category.swift */,
+				60876C7F1DD8D5D2001E6F33 /* Group.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -342,10 +354,14 @@
 				60340FFB1DD7E55800C040F7 /* ContactTableViewCell.swift in Sources */,
 				603410011DD7EE4F00C040F7 /* Server+Contacts.swift in Sources */,
 				60340FF91DD7E4E900C040F7 /* Contact.swift in Sources */,
+				60876C801DD8D5D2001E6F33 /* Group.swift in Sources */,
 				60340FE81DD7BE9200C040F7 /* Server+Auth.swift in Sources */,
 				60340FF11DD7D4B100C040F7 /* EventCell.swift in Sources */,
 				603410031DD7FB5000C040F7 /* DurationTableViewController.swift in Sources */,
+				60876C821DD8DA90001E6F33 /* Server+Groups.swift in Sources */,
 				603410091DD8172300C040F7 /* ImageCollectionViewCell.swift in Sources */,
+				60876C7C1DD8D4B6001E6F33 /* GroupsTableViewController.swift in Sources */,
+				60876C7E1DD8D542001E6F33 /* GroupCell.swift in Sources */,
 				608D0FCD1DD7B99A004860BF /* LoginViewController.swift in Sources */,
 				60340FDF1DD7BB1A00C040F7 /* SegueHandlerType.swift in Sources */,
 				60340FF31DD7DA1B00C040F7 /* Event.swift in Sources */,

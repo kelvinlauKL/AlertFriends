@@ -10,8 +10,8 @@ import UIKit
 
 final class ImageCollectionViewCell: UICollectionViewCell {
   static let reuseIdentifier = "\(ImageCollectionViewCell.self)"
-  @IBOutlet fileprivate var imageView: UIImageView!
-  @IBOutlet fileprivate var filterView: UIView!
+  @IBOutlet var imageView: UIImageView!
+  @IBOutlet var filterView: UIView!
   
   var category: Category! {
     didSet {

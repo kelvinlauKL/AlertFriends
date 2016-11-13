@@ -54,6 +54,7 @@ struct Event {
   var image: UIImage
   var threatLevel: ThreatLevel
   var duration: TimeInterval
+  var targetGroup: Group
   
   var durationDescription: String {
     let seconds = Int(duration)

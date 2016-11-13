@@ -26,6 +26,11 @@ final class CreateEventViewController: UITableViewController {
   }
   
   @IBOutlet fileprivate var threatIndicatorView: UIView!
+  @IBOutlet fileprivate var groupLabel: UILabel! {
+    didSet {
+      groupLabel.isHidden = true
+    }
+  }
   
   weak var delegate: CreateEventDelegate?
   
@@ -55,6 +60,15 @@ final class CreateEventViewController: UITableViewController {
     }
   }
   
+  fileprivate var group: Group? {
+    didSet {
+      if let group = group {
+        groupLabel.text = group.name
+        groupLabel.isHidden = false
+      }
+    }
+  }
+  
   fileprivate var categories = Category.allValues
   fileprivate var isSelected = Category.allValues.map { _ -> Bool in
     return false
@@ -64,7 +78,7 @@ final class CreateEventViewController: UITableViewController {
 // MARK: - SegueHandlerType
 extension CreateEventViewController: SegueHandlerType {
   enum SegueIdentifier: String {
-    case durationSelector, threatSelector
+    case durationSelector, threatSelector, groupSelector
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -75,6 +89,9 @@ extension CreateEventViewController: SegueHandlerType {
     case .threatSelector:
       let threatVC = segue.destination as! ThreatTableViewController
       threatVC.delegate = self
+    case .groupSelector:
+      let groupVC = segue.destination as! GroupTableViewController
+      groupVC.delegate = self
     }
   }
 }
@@ -108,7 +125,6 @@ extension CreateEventViewController: UICollectionViewDelegate {
       }
     }
     
-    print(isSelected)
     collectionView.reloadData()
   }
 }
@@ -140,6 +156,8 @@ extension CreateEventViewController {
       performSegue(withIdentifier: .threatSelector, sender: nil)
     case .duration:
       performSegue(withIdentifier: .durationSelector, sender: nil)
+    case .targetGroup:
+      performSegue(withIdentifier: .groupSelector, sender: nil)
     }
   }
 }
@@ -158,15 +176,30 @@ extension CreateEventViewController: ThreatSelectorDelegate {
   }
 }
 
+// MARK: - GroupSelectorDelegate
+extension CreateEventViewController: GroupSelectorDelegate {
+  func didSelectGroup(group: Group) {
+    self.group = group
+  }
+}
+
 // MARK: - @IBActions
 private extension CreateEventViewController {
   @IBAction func doneButtonTapped() {
-    guard let threatLevel = threatLevel, let duration = duration, let name = eventName.text, !name.isEmpty else {
+    guard let threatLevel = threatLevel, let duration = duration, let name = eventName.text, let group = group, !name.isEmpty else {
       displayAlert(withMessage: "Missing Fields.")
       return
     }
     
-    let event = Event(name: name, image: #imageLiteral(resourceName: "groceryShopping"), threatLevel: threatLevel, duration: duration)
+    var image = #imageLiteral(resourceName: "profilePlaceholder")
+    for (index, value) in isSelected.enumerated() {
+      if value {
+        image = categories[index].image
+      }
+    }
+    
+    
+    let event = Event(name: name, image: image, threatLevel: threatLevel, duration: duration, targetGroup: group)
     
     delegate?.eventCreated(event: event)
     _ = navigationController?.popViewController(animated: true)
